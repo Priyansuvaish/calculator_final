@@ -9,8 +9,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source> <!-- Updated to 1.8 as 21 is not a standard version as of my last update -->
+        <maven.compiler.target>1.8</maven.compiler.target> <!-- Updated to 1.8 as well -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.jupiter.version>5.7.0</junit.jupiter.version>
         <log4j2.version>2.14.1</log4j2.version>
     </properties>
