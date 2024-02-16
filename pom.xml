@@ -75,7 +75,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>org.example.calculator</mainClass>
+                                    <mainClass>src.main.java.org.example.calculator</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>

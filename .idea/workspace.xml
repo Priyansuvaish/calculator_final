@@ -35,7 +35,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
-    "Application.calculator.executor": "Run",
+    "Application.calculator.executor": "Coverage",
     "JUnit.calculator_Test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -95,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708077553312</updated>
       <workItem from="1708077554661" duration="2409000" />
-      <workItem from="1708081488636" duration="1711000" />
+      <workItem from="1708081488636" duration="2021000" />
     </task>
     <servers />
   </component>
@@ -104,5 +104,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/calculator_final$calculator.ic" NAME="calculator Coverage Results" MODIFIED="1708083316771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
   </component>
 </project>
