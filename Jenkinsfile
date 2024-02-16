@@ -6,6 +6,7 @@ pipeline {
         jdk "jdk" 
     }
   environment {
+        DOCKER_IMAGE_NAME = 'calculator'
         GITHUB_REPO_URL = 'https://github.com/Priyansuvaish/Calculator.git'
     }
 
@@ -42,6 +43,37 @@ pipeline {
             steps {
                 // Archive the built artifacts
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+            }
+        }
+
+    stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build Docker image
+                    docker.build("${DOCKER_IMAGE_NAME}", '.')
+                }
+            }
+        }
+
+        stage('Push Docker Images') {
+            steps {
+                script{
+                    docker.withRegistry('', 'de42dccd-1664-4127-a754-d681873bedec') {
+                    sh 'docker tag calculator priyanshugupta753/calculator:latest'
+                    sh 'docker push priyanshugupta753/calculator'
+                    }
+                 }
+            }
+        }
+
+   stage('Run Ansible Playbook') {
+            steps {
+                script {
+                    ansiblePlaybook(
+                        playbook: 'deploy.yml',
+                        inventory: 'inventory'
+                     )
+                }
             }
         }
     }
