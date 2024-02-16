@@ -1,9 +1,3 @@
-I'll start by reviewing the uploaded PDF file to understand its content and then create a suitable README file for a GitHub repository based on that information. Let's open the PDF file and take a look at its contents.
-
-Based on the content of the PDF file, here's a draft for a README file suitable for a GitHub repository. This README outlines the project's purpose, its DevOps aspects, and provides links to the necessary resources.
-
----
-
 # Scientific Calculator with DevOps Integration
 
 This project demonstrates a comprehensive DevOps pipeline for a Scientific Calculator application, showcasing best practices in software development, testing, containerization, and deployment automation.
@@ -34,20 +28,6 @@ The Scientific Calculator application is designed to perform a variety of mathem
 - Docker for containerization
 - Ansible for deployment
 
-## Getting Started
-
-To run this project locally, ensure you have Docker and Git installed on your machine. Clone the repository, build the Docker image and run it using the following commands:
-
-```bash
-git clone https://github.com/Priyansuvaish/project
-cd project
-docker build -t scientific-calculator .
-docker run scientific-calculator
-```
-
-## Contributions
-
-Contributions are welcome! Please read the contribution guidelines in CONTRIBUTING.md before submitting a pull request.
 
 ## Links
 
@@ -57,7 +37,3 @@ Contributions are welcome! Please read the contribution guidelines in CONTRIBUTI
 ## Acknowledgments
 
 Thanks to the International Institute of Information Technology, Bangalore, for providing the guidance and infrastructure to complete this project.
-
----
-
-This README template provides a concise overview of the project and its DevOps integration. You can customize and expand each section based on the specific details and requirements of your project.
