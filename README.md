@@ -31,7 +31,7 @@ The Scientific Calculator application is designed to perform a variety of mathem
 
 ## Links
 
-- [GitHub Repository](https://github.com/Priyansuvaish/project)
+- [GitHub Repository](https://github.com/Priyansuvaish/calculator_final.git)
 - [Docker Hub Image](docker pull priyanshugupta753/calculator)
 
 ## Acknowledgments
