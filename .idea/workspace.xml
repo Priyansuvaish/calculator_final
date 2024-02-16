@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdaae234-fa5f-461c-b0c9-483411104e0f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/calculator_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/calculatorTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="bdaae234-fa5f-461c-b0c9-483411104e0f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +36,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "Application.calculator.executor": "Run",
+    "JUnit.calculator_Test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -100,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708077553312</updated>
       <workItem from="1708077554661" duration="2409000" />
-      <workItem from="1708081488636" duration="960000" />
+      <workItem from="1708081488636" duration="1372000" />
     </task>
     <servers />
   </component>

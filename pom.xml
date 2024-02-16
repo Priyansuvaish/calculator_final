@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>Calculator</artifactId>
+    <artifactId>calculator</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -75,7 +75,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>org.example.Calculator</mainClass>
+                                    <mainClass>org.example.calculator</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
