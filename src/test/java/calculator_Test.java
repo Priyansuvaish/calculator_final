@@ -1,10 +1,9 @@
 import org.example.calculator;
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+public class calculator_Test {
 
-public class calculatorTest {
     private static final double delta = 1e-15;
     calculator c=new calculator();
 

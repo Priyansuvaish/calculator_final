@@ -1,2 +1,38 @@
 2024-02-16 16:09:55.107 [calculator.java] [INFO] org.example.calculator [SQ ROOT] - 5.0
 2024-02-16 16:09:55.118 [calculator.java] [INFO] org.example.calculator [RESULT - SQ ROOT] - 2.23606797749979
+2024-02-16 16:53:26.889 [calculator.java] [INFO] org.example.calculator [SQ ROOT] - 49.0
+2024-02-16 16:53:26.905 [calculator.java] [INFO] org.example.calculator [RESULT - SQ ROOT] - 7.0
+2024-02-16 16:53:26.906 [calculator.java] [ERROR] org.example.calculator invalid data
+2024-02-16 16:53:26.907 [calculator.java] [INFO] org.example.calculator [SQ ROOT] - -49.0
+2024-02-16 16:53:26.907 [calculator.java] [INFO] org.example.calculator [RESULT - SQ ROOT] - NaN
+2024-02-16 16:53:26.911 [calculator.java] [INFO] org.example.calculator [FACTORIAL] - 7.0
+2024-02-16 16:53:26.912 [calculator.java] [INFO] org.example.calculator [RESULT - FACTORIAL] - 5040.0
+2024-02-16 16:53:26.913 [calculator.java] [ERROR] org.example.calculator invalid data
+2024-02-16 16:53:26.915 [calculator.java] [INFO] org.example.calculator [NATURAL LOG] - 3.0
+2024-02-16 16:53:26.916 [calculator.java] [INFO] org.example.calculator [RESULT - NATURAL LOG] - 1.0986122886681098
+2024-02-16 16:53:26.917 [calculator.java] [ERROR] org.example.calculator invalid data
+2024-02-16 16:53:26.918 [calculator.java] [INFO] org.example.calculator [NATURAL LOG] - -4.0
+2024-02-16 16:53:26.919 [calculator.java] [INFO] org.example.calculator [RESULT - NATURAL LOG] - NaN
+2024-02-16 16:53:26.921 [calculator.java] [INFO] org.example.calculator [SQ ROOT] - 49.0
+2024-02-16 16:53:26.922 [calculator.java] [INFO] org.example.calculator [RESULT - SQ ROOT] - 7.0
+2024-02-16 16:53:26.923 [calculator.java] [ERROR] org.example.calculator invalid data
+2024-02-16 16:53:26.924 [calculator.java] [INFO] org.example.calculator [SQ ROOT] - -49.0
+2024-02-16 16:53:26.925 [calculator.java] [INFO] org.example.calculator [RESULT - SQ ROOT] - NaN
+2024-02-16 16:53:26.927 [calculator.java] [INFO] org.example.calculator [POWER - 4.0 RAISED TO] 2.0
+2024-02-16 16:53:26.927 [calculator.java] [INFO] org.example.calculator [RESULT - POWER] - 16.0
+2024-02-16 16:53:26.928 [calculator.java] [INFO] org.example.calculator [POWER - 3.0 RAISED TO] 0.0
+2024-02-16 16:53:26.930 [calculator.java] [INFO] org.example.calculator [RESULT - POWER] - 1.0
+2024-02-16 16:53:26.932 [calculator.java] [INFO] org.example.calculator [NATURAL LOG] - 4.0
+2024-02-16 16:53:26.932 [calculator.java] [INFO] org.example.calculator [RESULT - NATURAL LOG] - 1.3862943611198906
+2024-02-16 16:53:26.933 [calculator.java] [ERROR] org.example.calculator invalid data
+2024-02-16 16:53:26.933 [calculator.java] [INFO] org.example.calculator [NATURAL LOG] - -4.0
+2024-02-16 16:53:26.934 [calculator.java] [INFO] org.example.calculator [RESULT - NATURAL LOG] - NaN
+2024-02-16 16:53:26.935 [calculator.java] [INFO] org.example.calculator [POWER - 2.0 RAISED TO] 8.0
+2024-02-16 16:53:26.936 [calculator.java] [INFO] org.example.calculator [RESULT - POWER] - 256.0
+2024-02-16 16:53:26.937 [calculator.java] [ERROR] org.example.calculator invalid data
+2024-02-16 16:53:26.938 [calculator.java] [INFO] org.example.calculator [POWER - 0.0 RAISED TO] 1.0
+2024-02-16 16:53:26.939 [calculator.java] [INFO] org.example.calculator [RESULT - POWER] - 0.0
+2024-02-16 16:53:26.940 [calculator.java] [INFO] org.example.calculator [FACTORIAL] - 3.0
+2024-02-16 16:53:26.961 [calculator.java] [INFO] org.example.calculator [RESULT - FACTORIAL] - 6.0
+2024-02-16 16:53:26.965 [calculator.java] [INFO] org.example.calculator [FACTORIAL] - 5.0
+2024-02-16 16:53:26.966 [calculator.java] [INFO] org.example.calculator [RESULT - FACTORIAL] - 120.0

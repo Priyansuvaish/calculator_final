@@ -73,52 +73,57 @@ public class calculator {
 
     public static void main(String[] args) {
 
+        calculator c=new calculator();
         Scanner scanner = new Scanner(System.in);
-
-        while(true) {
+        double number1, number2;
+        do {
             System.out.println("calculatordev_project, Choose to perform operation");
-            System.out.print("Type 1 to find factorial\nType 2 to find Square root\nType 3 to find power\nType 4 to find natural logarithm\nType any other digit to exit\nEnter the type of operation: ");
-
+            System.out.print("Type 1 to find factorial\nType 2 to find Square root\nType 3 to find power\nType 4 to find natural logarithm\n" +
+                    "Type any other digit to exit\nEnter the type of operation: ");
             int ch;
             try {
                 ch = scanner.nextInt();
-            } catch (InputMismatchException var13) {
+            } catch (InputMismatchException error) {
                 return;
             }
 
-            double number1;
             switch (ch) {
                 case 1:
                     System.out.print("Enter a number : ");
                     number1 = scanner.nextDouble();
-                    System.out.println("Factorial of " + number1 + " is : " + fact(number1));
+                    System.out.println("Factorial of "+number1+" is : " + c.fact(number1));
                     System.out.println("\n");
+
                     break;
                 case 2:
                     System.out.print("Enter a number : ");
                     number1 = scanner.nextDouble();
-                    System.out.println("Square root of " + number1 + " is : " + sqroot(number1));
+                    System.out.println("Square root of "+number1+" is : " + c.sqroot(number1));
                     System.out.println("\n");
+
+
                     break;
                 case 3:
+                    // find power of entered numbers
                     System.out.print("Enter the first number : ");
                     number1 = scanner.nextDouble();
                     System.out.print("Enter the second number : ");
-                    double number2 = scanner.nextDouble();
-                    System.out.println("" + number1 + " raised to power " + number2 + " is : " + power(number1, number2));
+                    number2 = scanner.nextDouble();
+                    System.out.println(number1+ " raised to power "+number2+" is : " + c.power(number1, number2));
                     System.out.println("\n");
                     break;
                 case 4:
                     System.out.print("Enter a number : ");
                     number1 = scanner.nextDouble();
-                    System.out.println("Natural log of " + number1 + " is : " + naturalLog(number1));
+                    System.out.println("Natural log of "+number1+" is : " + c.naturalLog(number1));
                     System.out.println("\n");
+
                     break;
                 default:
                     System.out.println("Exiting....");
                     return;
             }
-        }
+        } while (true);
 
     }
 }
