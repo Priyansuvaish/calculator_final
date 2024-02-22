@@ -15,7 +15,7 @@ The Scientific Calculator application is designed to perform a variety of mathem
 
 - **Source Control Management**: Utilizes Git and GitHub for version control and source code management.
 - **Continuous Integration and Deployment (CI/CD)**: Automated build and deployment with Jenkins.
-- **Containerization**: Docker used for packaging and deploying the application in a consistent environment.
+- **Containerization**: Docker is used for packaging and deploying the application in a consistent environment.
 - **Configuration Management**: Ansible scripts for automating server configurations.
 - **Monitoring and Logging**: Setup (not detailed in PDF, but typically involves tools like ELK Stack for insights into application performance and behavior).
 
