@@ -24,7 +24,7 @@ The Scientific Calculator application is designed to perform a variety of mathem
 - GitHub for source control
 - Maven for building the code
 - JUnit for testing
-- Jenkins for CI/CD
+- Jenkins for 
 - Docker for containerization
 - Ansible for deployment
 
