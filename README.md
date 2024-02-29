@@ -8,7 +8,7 @@ The Scientific Calculator application is designed to perform a variety of mathem
 
 ## Features
 
-- Basic arithmetic 
+- Basic arithmetic operations
 - Advanced mathematical functions including square root, factorial, power, and natural logarithm calculations
 
 ## DevOps Pipeline Overview
