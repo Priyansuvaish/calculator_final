@@ -46,37 +46,37 @@ pipeline {
             }
         }
 
-    stage('Build Docker Image') {
-            steps {
-                script {
-                    // Build Docker image
-                    docker.build("${DOCKER_IMAGE_NAME}", '.')
-                }
-            }
-        }
+   //  stage('Build Docker Image') {
+   //          steps {
+   //              script {
+   //                  // Build Docker image
+   //                  docker.build("${DOCKER_IMAGE_NAME}", '.')
+   //              }
+   //          }
+   //      }
 
-        stage('Push Docker Images') {
-            steps {
-                script{
-                    docker.withRegistry('', 'de42dccd-1664-4127-a754-d681873bedec') {
-                    sh 'docker tag calculator priyanshugupta753/calculator:latest'
-                    sh 'docker push priyanshugupta753/calculator'
-                    }
-                 }
-            }
-        }
+   //      stage('Push Docker Images') {
+   //          steps {
+   //              script{
+   //                  docker.withRegistry('', 'de42dccd-1664-4127-a754-d681873bedec') {
+   //                  sh 'docker tag calculator priyanshugupta753/calculator:latest'
+   //                  sh 'docker push priyanshugupta753/calculator'
+   //                  }
+   //               }
+   //          }
+   //      }
 
-   stage('Run Ansible Playbook') {
-            steps {
-                script {
-                    ansiblePlaybook(
-                        playbook: 'deploy.yml',
-                        inventory: 'inventory'
-                     )
-                }
-            }
-        }
-    }
+   // stage('Run Ansible Playbook') {
+   //          steps {
+   //              script {
+   //                  ansiblePlaybook(
+   //                      playbook: 'deploy.yml',
+   //                      inventory: 'inventory'
+   //                   )
+   //              }
+   //          }
+   //      }
+   //  }
 
     post {
         // Define actions to take in case of build failure or success
