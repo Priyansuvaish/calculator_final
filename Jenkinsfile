@@ -13,7 +13,7 @@ pipeline {
         SONAR_PROJECT_NAME = 'calculator_final'
         SONAR_HOST_URL = 'http://localhost:9000'
         SONAR_TOKEN = 'sqp_c8bb2fe655dfe32984cb510d2fccd69ffb3e2776' // Replace with your actual token
-        ZAP_DOCKER_IMAGE = 'owasp/zap2docker-stable'  // OWASP ZAP Docker image
+        ZAP_DOCKER_IMAGE = 'ghcr.io/zaproxy/zaproxy:stable'  // OWASP ZAP Docker image
         TARGET_URL = 'https://testapp12-hjbyfqbvb5hnbshv.southindia-01.azurewebsites.net/'  // Replace with your actual target URL
         REPORT_DIR = 'zap-reports'  // Directory to store ZAP reports
     }
