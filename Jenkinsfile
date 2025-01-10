@@ -13,6 +13,9 @@ pipeline {
         SONAR_PROJECT_NAME = 'calculator_final'
         SONAR_HOST_URL = 'http://localhost:9000'
         SONAR_TOKEN = 'sqp_c8bb2fe655dfe32984cb510d2fccd69ffb3e2776' // Replace with your actual token
+        ZAP_DOCKER_IMAGE = 'owasp/zap2docker-stable'  // OWASP ZAP Docker image
+        TARGET_URL = 'https://testapp12-hjbyfqbvb5hnbshv.southindia-01.azurewebsites.net/'  // Replace with your actual target URL
+        REPORT_DIR = 'zap-reports'  // Directory to store ZAP reports
     }
 
     stages {
@@ -54,6 +57,41 @@ pipeline {
                         """
                     }
                 }
+            }
+        }
+
+        stage('OWASP ZAP Scan') {
+            steps {
+                script {
+                    try {
+                        // Pull OWASP ZAP Docker image
+                        sh "docker pull ${ZAP_DOCKER_IMAGE}"
+
+                        // Run ZAP Docker container with scan
+                        sh """
+                        docker run --rm -v \$(pwd)/${REPORT_DIR}:/zap/wrk/:rw -t ${ZAP_DOCKER_IMAGE} \
+                            zap-baseline.py -t ${TARGET_URL} -g gen.conf -r /zap/wrk/zap_report.html
+                        """
+                    } catch (Exception e) {
+                        currentBuild.result = 'FAILURE'
+                        throw e
+                    }
+                }
+            }
+        }
+
+        stage('Copy ZAP Report to Jenkins Workspace') {
+            steps {
+                script {
+                    // Copy the generated HTML report to Jenkins workspace
+                    sh 'cp zap-reports/zap_report.html $WORKSPACE/zap_report.html'
+                }
+            }
+        }
+
+        stage('Archive ZAP Report') {
+            steps {
+                archiveArtifacts artifacts: 'zap_report.html', fingerprint: true
             }
         }
 
