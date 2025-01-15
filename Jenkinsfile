@@ -68,7 +68,7 @@ stage('OWASP ZAP Scan') {
 
                         // Run ZAP Docker container with scan
                         sh """
-                        docker run --rm -v \$(pwd)/${REPORT_DIR}:/zap/wrk/:rw -t ${ZAP_DOCKER_IMAGE} \
+                        docker run -v \$(pwd)/${REPORT_DIR}:/zap/wrk/:rw -t ${ZAP_DOCKER_IMAGE} \
                             zap-baseline.py -t ${TARGET_URL} -g gen.conf -r /zap/wrk/zap_report.html
                         """
                         
