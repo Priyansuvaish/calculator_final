@@ -59,8 +59,7 @@ pipeline {
                 }
             }
         }
-
-        stage('OWASP ZAP Scan') {
+stage('OWASP ZAP Scan') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
                     script {
@@ -81,8 +80,9 @@ pipeline {
             steps {
                 script {
                     // Check if the report exists before copying
-                    def reportFile = 'zap-reports/zap_report.html'
+                    def reportFile = "${REPORT_DIR}/zap_report.html"
                     if (fileExists(reportFile)) {
+                        echo "ZAP report found, copying to workspace."
                         sh "cp ${reportFile} ${WORKSPACE}/zap_report.html"
                     } else {
                         echo "ZAP report not found, skipping copy."
@@ -93,11 +93,18 @@ pipeline {
 
         stage('Archive ZAP Report') {
             steps {
-                archiveArtifacts artifacts: 'zap_report.html', fingerprint: true
+                script {
+                    // Archive the ZAP report if it exists
+                    if (fileExists('zap_report.html')) {
+                        archiveArtifacts artifacts: 'zap_report.html', fingerprint: true
+                    } else {
+                        echo "ZAP report not found for archiving."
+                    }
+                }
             }
         }
 
-        stage('Archive') {
+        stage('Archive Build Artifacts') {
             steps {
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
