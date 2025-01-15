@@ -80,8 +80,13 @@ pipeline {
         stage('Copy ZAP Report to Jenkins Workspace') {
             steps {
                 script {
-                    // Copy the generated HTML report to Jenkins workspace
-                    sh 'cp zap-reports/zap_report.html $WORKSPACE/zap_report.html'
+                    // Check if the report exists before copying
+                    def reportFile = 'zap-reports/zap_report.html'
+                    if (fileExists(reportFile)) {
+                        sh "cp ${reportFile} ${WORKSPACE}/zap_report.html"
+                    } else {
+                        echo "ZAP report not found, skipping copy."
+                    }
                 }
             }
         }
