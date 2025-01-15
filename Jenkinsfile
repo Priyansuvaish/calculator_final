@@ -71,6 +71,9 @@ stage('OWASP ZAP Scan') {
                         docker run --rm -v \$(pwd)/${REPORT_DIR}:/zap/wrk/:rw -t ${ZAP_DOCKER_IMAGE} \
                             zap-baseline.py -t ${TARGET_URL} -g gen.conf -r /zap/wrk/zap_report.html
                         """
+                        
+                        // Debug: List the contents of the REPORT_DIR to ensure the report was generated
+                        sh "ls -la ${REPORT_DIR}"
                     }
                 }
             }
