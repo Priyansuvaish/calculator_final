@@ -62,8 +62,8 @@ pipeline {
 
         stage('OWASP ZAP Scan') {
             steps {
-                script {
-                    try {
+                catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') {
+                    script {
                         // Pull OWASP ZAP Docker image
                         sh "docker pull ${ZAP_DOCKER_IMAGE}"
 
@@ -72,9 +72,6 @@ pipeline {
                         docker run --rm -v \$(pwd)/${REPORT_DIR}:/zap/wrk/:rw -t ${ZAP_DOCKER_IMAGE} \
                             zap-baseline.py -t ${TARGET_URL} -g gen.conf -r /zap/wrk/zap_report.html
                         """
-                    } catch (Exception e) {
-                        echo "OWASP ZAP scan failed, but continuing pipeline..."
-                        currentBuild.result = 'SUCCESS'
                     }
                 }
             }
